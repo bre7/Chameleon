@@ -33,27 +33,27 @@ import UIKit
 
 //UIColor Methods Shorthand
 public func ComplementaryFlatColorOf(color: UIColor) -> UIColor {
-    return UIColor(complementaryFlatColorOf: color)
+    return color.complementaryFlatColor()
 }
 
 public func RandomFlatColorWithShade(shade: UIShadeStyle) -> UIColor {
-    return UIColor(randomFlatColorOfShadeStyle: shade)
+    return UIColor.randomFlatColorOfShadeStyle(shade)
 }
 
-public func ContrastColorOf(backgroundColor: UIColor, returnFlat: Bool) -> UIColor {
-    return UIColor(contrastingBlackOrWhiteColorOn: backgroundColor, isFlat: returnFlat)
+public func ContrastColor(backgroundColor: UIColor, _ returnFlat: Bool) -> UIColor {
+    return backgroundColor.contrastingBlackOrWhiteColor(isFlat: returnFlat)
 }
 
-public func GradientColor(gradientStyle: UIGradientStyle, frame: CGRect, colors: [UIColor]) -> UIColor {
-    return UIColor(gradientStyle: gradientStyle, withFrame: frame, andColors: colors)
+public func GradientColor(gradientStyle: UIGradientStyle, _ frame: CGRect, _ colors: [UIColor]) -> UIColor {
+    return UIColor.colorWithGradientStyle(gradientStyle, withFrame: frame, andColors: colors)
 }
 
-func HexColor(hexString: String, withAlpha alpha: CGFloat = 1.0) -> UIColor {
+public func HexColor(hexString: String, _ alpha: CGFloat = 1.0) -> UIColor? {
     return UIColor(hexString: hexString, withAlpha: alpha)
 }
 
-func AverageColorFromImage(image: UIImage) -> UIColor {
-    return UIColor(averageColorFromImage: image)
+public func AverageColorFromImage(image: UIImage) -> UIColor {
+    return image.averageColorFromImage()
 }
 
 // MARK: - Chameleon - NSArray Methods Shorthand
@@ -61,13 +61,12 @@ func AverageColorFromImage(image: UIImage) -> UIColor {
 //NSArray Methods Shorthand
 // TODO Array Extension needed ;)
 
-/*
-public func ColorSchemeOf(colorSchemeType:ColorScheme, color:UIColor, isFlatScheme:Bool) -> Array <UIColor> {
-    return NSArray(ofColorsWithColorScheme:colorSchemeType, with:color, flatScheme: isFlatScheme) as! [UIColor]
-}*/
+public func ColorSchemeOf(colorSchemeType:ColorScheme, _ color:UIColor, _ isFlatScheme:Bool) -> [UIColor] {
+    return color.colorSchemeOfType(colorSchemeType, flat: isFlatScheme)
+}
 
-func ColorsFromImage(image: UIImage, _ withFlatScheme: Bool) -> NSArray {
-    return NSArray(ofColorsFromImage: UIImage(), withFlatScheme: true)
+public func ColorsFromImage(image: UIImage, _ withFlatScheme: Bool) -> [UIColor] {
+    return image.colorsFromImage(useFlatScheme: withFlatScheme)
 }
 
 
