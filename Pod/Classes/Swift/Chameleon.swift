@@ -398,7 +398,7 @@ class Chameleon {
         
     }
     
-    public class func colorForContentStyle(contentStyle: UIContentStyle, baseColor: UIColor) -> UIColor {
+    class func colorForContentStyle(contentStyle: UIContentStyle, baseColor: UIColor) -> UIColor {
         switch contentStyle {
         case .Contrast:
             return ContrastColor(baseColor, false)
