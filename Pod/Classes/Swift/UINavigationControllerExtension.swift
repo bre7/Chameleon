@@ -9,13 +9,13 @@
 import Foundation
 import UIKit
 
-extension UIStatusBarStyle {
+public extension UIStatusBarStyle {
     public static var Contrast: UIStatusBarStyle { // There's no way to add an extra case
         return UIStatusBarStyle(rawValue: 100)!
     }
 }
 
-extension UINavigationController {
+public extension UINavigationController {
     // MARK: - Swizzling
     // Thanks to NSHipster for the explanation
     
@@ -61,6 +61,8 @@ extension UINavigationController {
     }
     
     func findHairlineImageViewUnder(view: UIView) -> UIImageView? {
+        print("    findHairlineImageViewUnder")
+        
         if view is UIImageView && view.bounds.size.height <= 1.0 {
             return view as? UIImageView
         }
@@ -74,7 +76,7 @@ extension UINavigationController {
     }
 }
 
-extension UINavigationController {
+public extension UINavigationController {
     
     /**
     *  Sets the status bar style for the specified @c UINavigationController and all its child controllers.

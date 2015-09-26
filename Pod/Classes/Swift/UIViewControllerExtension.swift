@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-extension UIViewController {
+public extension UIViewController {
 
     // MARK: - Methods
     
@@ -186,7 +186,7 @@ extension UIViewController {
         UINavigationBar.appearanceWhenContainedInInstancesOfClasses([UIViewController.self]).barTintColor = (primaryColor)
         UINavigationBar.appearanceWhenContainedInInstancesOfClasses([UIViewController.self]).tintColor = (contentColor)
         UINavigationBar.appearanceWhenContainedInInstancesOfClasses([UIViewController.self]).titleTextAttributes = [NSForegroundColorAttributeName:contentColor]
-//        UINavigationBar.appearanceWhenContainedInInstancesOfClasses([UIViewController.self]).shadowImage = (UIImage.new())
+        UINavigationBar.appearanceWhenContainedInInstancesOfClasses([UIViewController.self]).shadowImage = UIImage()
 //        UINavigationBar.appearanceWhenContainedInInstancesOfClasses([UIViewController.self]).setBackgroundImage(UIImage.new(), forBarMetrics:UIBarMetricsDefault)
         
     }
@@ -195,7 +195,7 @@ extension UIViewController {
         UINavigationBar.appearanceWhenContainedInInstancesOfClasses([UIViewController.self]).barTintColor = (barColor)
         UINavigationBar.appearanceWhenContainedInInstancesOfClasses([UIViewController.self]).tintColor = (buttonColor)
         UINavigationBar.appearanceWhenContainedInInstancesOfClasses([UIViewController.self]).titleTextAttributes = [NSForegroundColorAttributeName:textColor]
-//        UINavigationBar.appearanceWhenContainedInInstancesOfClasses([UIViewController.self]).shadowImage = (UIImage.new())
+        UINavigationBar.appearanceWhenContainedInInstancesOfClasses([UIViewController.self]).shadowImage = UIImage()
 //        UINavigationBar.appearanceWhenContainedInInstancesOfClasses([UIViewController.self]).setBackgroundImage(UIImage.new(), forBarMetrics:UIBarMetricsDefault)
         
     }
@@ -203,7 +203,7 @@ extension UIViewController {
     class func customizeNavigationBarWithBarColor(barColor: UIColor, textColor: UIColor, fontName: String, fontSize: CGFloat, buttonColor: UIColor) {
         UINavigationBar.appearanceWhenContainedInInstancesOfClasses([self]).barTintColor = (barColor)
         UINavigationBar.appearanceWhenContainedInInstancesOfClasses([UIViewController.self]).tintColor = (buttonColor)
-//        UINavigationBar.appearanceWhenContainedInInstancesOfClasses([UIViewController.self]).shadowImage = (UIImage.new())
+        UINavigationBar.appearanceWhenContainedInInstancesOfClasses([UIViewController.self]).shadowImage = UIImage()
 //        UINavigationBar.appearanceWhenContainedInInstancesOfClasses([UIViewController.self]).setBackgroundImage(UIImage.new(), forBarMetrics:UIBarMetricsDefault)
         if let font = UIFont(name:fontName, size:fontSize) {
             UINavigationBar.appearanceWhenContainedInInstancesOfClasses([UIViewController.self]).titleTextAttributes = [NSForegroundColorAttributeName:textColor, NSFontAttributeName:font]
@@ -354,7 +354,7 @@ extension UIViewController {
     }
 }
 
-extension UIViewController {
+public extension UIViewController {
     // MARK: - Swizzling
     // Thanks to NSHipster for the explanation
     
@@ -389,7 +389,7 @@ extension UIViewController {
     }
 }
 
-extension UIViewController {
+public extension UIViewController {
     
     private struct AssociatedKeys {
         static var ShouldContrast        = "cham_ShouldContrast"

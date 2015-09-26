@@ -224,7 +224,7 @@ class Chameleon {
         UINavigationBar.appearance().barTintColor = primaryColor
         UINavigationBar.appearance().tintColor = contentColor
         UINavigationBar.appearance().titleTextAttributes = [NSForegroundColorAttributeName : contentColor]
-        UINavigationBar.appearance().shadowImage = nil
+        UINavigationBar.appearance().shadowImage = UIImage()
         UINavigationBar.appearance().setBackgroundImage(nil, forBarMetrics:.Default)
         
     }

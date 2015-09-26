@@ -8,7 +8,7 @@
 
 import UIKit
 
-extension UILabel {
+public extension UILabel {
 
     func setSubstituteFontName(name: String)  {
         self.font = UIFont(name:name, size:self.font.pointSize)

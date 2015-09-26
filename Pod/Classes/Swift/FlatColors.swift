@@ -29,7 +29,7 @@ import UIKit
 
 
 
-extension UIColor {
+public extension UIColor {
     
     // MARK: - Chameleon - Light Shades
     class func flatBlackColor() -> UIColor {

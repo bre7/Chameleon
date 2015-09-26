@@ -34,7 +34,7 @@ public typealias labTuple  = (L: CGFloat, A: CGFloat, B: CGFloat, a: CGFloat)
 public typealias hsbTuple  = (h: CGFloat, s: CGFloat, b: CGFloat, a: CGFloat)
 public typealias xyzTuple  = (X: CGFloat, Y: CGFloat, Z: CGFloat, a: CGFloat)
 
-extension UIColor {
+public extension UIColor {
     
     /**
     *  Creates and returns a flat color object closest to the specified color in the LAB colorspace.

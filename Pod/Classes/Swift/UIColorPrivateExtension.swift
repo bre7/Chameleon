@@ -24,7 +24,7 @@ public func HSB(hue: CGFloat, _ saturation: CGFloat, _ brightness: CGFloat) -> U
     return UIColor(hue: hue, saturation: saturation, brightness: brightness, alpha: 1.0)
 }
 
-extension UIColor {
+public extension UIColor {
     convenience init(rgba: rgbaTuple) {
         self.init(red: rgba.r, green: rgba.g, blue: rgba.b, alpha: rgba.a)
     }

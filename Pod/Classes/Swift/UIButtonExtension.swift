@@ -8,7 +8,7 @@
 
 import UIKit
 
-extension UIButton {
+public extension UIButton {
     
     func setSubstituteFontName(name: String)  {
         guard let currentFontSize = titleLabel?.font.pointSize,

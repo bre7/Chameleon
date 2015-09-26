@@ -8,7 +8,7 @@
 
 import UIKit
 
-extension UIView {
+public extension UIView {
     
     var isTopViewInWindow: Bool {
         guard let window = self.window else { return false }

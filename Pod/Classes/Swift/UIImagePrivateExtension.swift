@@ -20,7 +20,7 @@ func +&& (lhs: CGFloat, rhs: CGFloat) -> CGFloat {
     }
 }
 
-extension UIImage {
+public extension UIImage {
     
     // Would not have been possible without - http://stackoverflow.com/a/25146557
     func getPixelColor(pos: CGPoint) -> UIColor {
